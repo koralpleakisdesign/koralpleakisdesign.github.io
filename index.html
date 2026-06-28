@@ -266,6 +266,7 @@
   .project-card:nth-child(3) { grid-column: span 4; }
   .project-card:nth-child(4) { grid-column: span 5; }
   .project-card:nth-child(5) { grid-column: span 7; }
+  .project-card:nth-child(6) { grid-column: span 12; }
 
   .project-card .card-img {
     width: 100%;
@@ -597,8 +598,72 @@
     letter-spacing: 0.06em;
   }
 
-  /* WAVE SVG */
-  .wave-divider {
+  /* ANIMATED WAVES */
+  .wave-scene {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    background: var(--deep);
+  }
+
+  .wave-scene svg {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+  }
+
+  .wave-scene .wave-1 {
+    animation: wave-move 6s linear infinite;
+    opacity: 0.5;
+  }
+
+  .wave-scene .wave-2 {
+    animation: wave-move 9s linear infinite reverse;
+    opacity: 0.35;
+  }
+
+  .wave-scene .wave-3 {
+    animation: wave-move 12s linear infinite;
+    opacity: 0.2;
+  }
+
+  @keyframes wave-move {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* CORAL SCENE */
+  .coral-scene {
+    position: relative;
+    width: 100%;
+    background: var(--deep);
+    overflow: hidden;
+    height: 90px;
+  }
+
+  .coral-scene svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* tiny bobbing coral stems */
+  .coral-a { animation: coral-sway 3.2s ease-in-out infinite; transform-origin: bottom center; }
+  .coral-b { animation: coral-sway 4.1s ease-in-out infinite 0.5s; transform-origin: bottom center; }
+  .coral-c { animation: coral-sway 2.8s ease-in-out infinite 1s; transform-origin: bottom center; }
+  .coral-d { animation: coral-sway 3.6s ease-in-out infinite 0.2s; transform-origin: bottom center; }
+  .coral-e { animation: coral-sway 4.4s ease-in-out infinite 0.8s; transform-origin: bottom center; }
+
+  @keyframes coral-sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50%       { transform: rotate(4deg); }
+  }
+
+
     display: block;
     width: 100%;
     overflow: hidden;
@@ -695,50 +760,72 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="project-card" data-category="print">
-      <div class="card-2-bg img-placeholder" style="min-height:260px;">
-        <span style="writing-mode:vertical-rl; letter-spacing:0.2em; text-transform:uppercase; font-size:0.75rem;">Add your image here</span>
-      </div>
+    <div class="project-card" data-category="digital">
+      <img
+        src="https://drive.google.com/thumbnail?id=1WmjVk3dXRBZbINNV2LHvGe0IavHSY5J-&sz=w800"
+        alt="To iimissyy — remastered profile picture commission"
+        class="card-img"
+        style="min-height:260px;">
       <div class="card-overlay">
-        <span class="card-tag">College &nbsp;·&nbsp; Print</span>
-        <h3>Book Cover Series</h3>
-        <p>Typography-led editorial design.</p>
+        <span class="card-tag">Commission &nbsp;·&nbsp; Digital Illustration</span>
+        <h3>To iimissyy</h3>
+        <p>Digital illustration commission — a remastered profile picture created for a fellow Episode Forums community member.</p>
       </div>
     </div>
 
     <!-- Card 3 -->
-    <div class="project-card" data-category="branding">
-      <div class="card-3-bg img-placeholder" style="min-height:260px;">
-        <span style="writing-mode:vertical-rl; letter-spacing:0.2em; text-transform:uppercase; font-size:0.75rem;">Add your image here</span>
-      </div>
+    <div class="project-card" data-category="digital">
+      <img
+        src="https://drive.google.com/thumbnail?id=1HBpsdOK7JjA99MKRmmBgKYYSX1fQOJVi&sz=w800"
+        alt="Episode cover illustration for Khloe.writes"
+        class="card-img"
+        style="min-height:260px;">
       <div class="card-overlay">
-        <span class="card-tag">College &nbsp;·&nbsp; Branding</span>
-        <h3>Magazine Redesign</h3>
-        <p>Layout &amp; identity systems.</p>
+        <span class="card-tag">Commission &nbsp;·&nbsp; Digital Illustration</span>
+        <h3>Cover for Khloe.writes</h3>
+        <p>Digital illustration commission — an Episode story cover created for Khloe.writes.</p>
       </div>
     </div>
 
-    <!-- Card 4 — was "type", now mapped to "print" to match filter -->
+    <!-- Card 4 -->
     <div class="project-card" data-category="print">
-      <div class="card-4-bg img-placeholder" style="min-height:260px;">
-        <span style="writing-mode:vertical-rl; letter-spacing:0.2em; text-transform:uppercase; font-size:0.75rem;">Add your image here</span>
-      </div>
+      <img
+        src="https://drive.google.com/thumbnail?id=1sUjRWzZ7zCeQhwvK9WmZVnvQ89Fk3G-c&sz=w800"
+        alt="36 Days of Type — typography project"
+        class="card-img"
+        style="min-height:260px;">
       <div class="card-overlay">
-        <span class="card-tag">College &nbsp;·&nbsp; Type</span>
+        <span class="card-tag">College &nbsp;·&nbsp; Typography</span>
         <h3>36 Days of Type</h3>
-        <p>Experimental lettering &amp; typeface exploration.</p>
+        <p>Experimental lettering &amp; typeface exploration completed as a college project.</p>
       </div>
     </div>
 
     <!-- Card 5 -->
     <div class="project-card" data-category="digital">
-      <div class="card-5-bg img-placeholder" style="min-height:260px;">
-        <span style="writing-mode:vertical-rl; letter-spacing:0.2em; text-transform:uppercase; font-size:0.75rem;">Add your image here</span>
-      </div>
+      <img
+        src="https://drive.google.com/thumbnail?id=1pyVWYGKm0XAREKMHAICro9v7e3pvuswI&sz=w800"
+        alt="Mockup — digital illustration"
+        class="card-img"
+        style="min-height:260px;">
       <div class="card-overlay">
-        <span class="card-tag">Freelance &nbsp;·&nbsp; Digital</span>
-        <h3>Episode Commission II</h3>
-        <p>Thumbnail &amp; channel art design.</p>
+        <span class="card-tag">Personal &nbsp;·&nbsp; Digital Illustration</span>
+        <h3>Mockup</h3>
+        <p>Digital illustration created in my free time.</p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="project-card" data-category="print">
+      <img
+        src="https://drive.google.com/thumbnail?id=1Jvz-K3Tf79lNCp0La6TuCnUdg5B0RSIe&sz=w800"
+        alt="Graphic Design is a Social Movement — mixed media illustration"
+        class="card-img"
+        style="min-height:260px;">
+      <div class="card-overlay">
+        <span class="card-tag">College &nbsp;·&nbsp; Mixed Media Illustration</span>
+        <h3>Graphic Design is a Social Movement</h3>
+        <p>Mixed media illustration exploring graphic design as a vehicle for social change, created as a college project.</p>
       </div>
     </div>
 
@@ -834,7 +921,88 @@
   </div>
 </div>
 
-<!-- WAVE DIVIDER -->
+<!-- CORAL SCENE -->
+<div class="coral-scene">
+  <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <!-- seabed -->
+    <rect x="0" y="70" width="1440" height="20" fill="#0c2535"/>
+
+    <!-- coral A - branching, left -->
+    <g class="coral-a">
+      <line x1="80" y1="70" x2="80" y2="40" stroke="#A8D8C8" stroke-width="3" stroke-linecap="round"/>
+      <line x1="80" y1="55" x2="65" y2="38" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="80" y1="50" x2="95" y2="34" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="80" cy="38" r="4" fill="#A8D8C8"/>
+      <circle cx="63" cy="36" r="3" fill="#A8D8C8"/>
+      <circle cx="97" cy="32" r="3" fill="#A8D8C8"/>
+    </g>
+
+    <!-- coral B - tall fan, centre-left -->
+    <g class="coral-b">
+      <line x1="320" y1="70" x2="320" y2="30" stroke="#5B8A7A" stroke-width="3" stroke-linecap="round"/>
+      <line x1="320" y1="48" x2="305" y2="32" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="320" y1="44" x2="335" y2="28" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="320" y1="40" x2="308" y2="22" stroke="#5B8A7A" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="320" y1="40" x2="332" y2="20" stroke="#5B8A7A" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="320" cy="28" r="3.5" fill="#5B8A7A"/>
+      <circle cx="303" cy="30" r="2.5" fill="#5B8A7A"/>
+      <circle cx="337" cy="26" r="2.5" fill="#5B8A7A"/>
+      <circle cx="306" cy="20" r="2" fill="#5B8A7A"/>
+      <circle cx="334" cy="18" r="2" fill="#5B8A7A"/>
+    </g>
+
+    <!-- coral C - round bubble coral, centre -->
+    <g class="coral-c">
+      <line x1="600" y1="70" x2="600" y2="50" stroke="#2980B9" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="600" cy="44" r="7" fill="none" stroke="#2980B9" stroke-width="2"/>
+      <circle cx="591" cy="36" r="5" fill="none" stroke="#2980B9" stroke-width="2"/>
+      <circle cx="609" cy="36" r="5" fill="none" stroke="#2980B9" stroke-width="2"/>
+      <circle cx="600" cy="30" r="4" fill="none" stroke="#2980B9" stroke-width="2"/>
+    </g>
+
+    <!-- coral D - thin wispy, right-centre -->
+    <g class="coral-d">
+      <line x1="900" y1="70" x2="900" y2="45" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="900" y1="58" x2="888" y2="42" stroke="#A8D8C8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="900" y1="54" x2="912" y2="38" stroke="#A8D8C8" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="900" cy="43" r="3" fill="#A8D8C8"/>
+      <circle cx="886" cy="40" r="2.5" fill="#A8D8C8"/>
+      <circle cx="914" cy="36" r="2.5" fill="#A8D8C8"/>
+    </g>
+
+    <!-- coral E - fan, far right -->
+    <g class="coral-e">
+      <line x1="1280" y1="70" x2="1280" y2="35" stroke="#5B8A7A" stroke-width="3" stroke-linecap="round"/>
+      <line x1="1280" y1="52" x2="1264" y2="36" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="1280" y1="48" x2="1296" y2="30" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="1280" cy="33" r="4" fill="#5B8A7A"/>
+      <circle cx="1262" cy="34" r="3" fill="#5B8A7A"/>
+      <circle cx="1298" cy="28" r="3" fill="#5B8A7A"/>
+    </g>
+
+    <!-- small pebbles on seabed -->
+    <ellipse cx="150" cy="72" rx="10" ry="4" fill="#0f3248"/>
+    <ellipse cx="450" cy="73" rx="7" ry="3" fill="#0f3248"/>
+    <ellipse cx="750" cy="72" rx="12" ry="4" fill="#0f3248"/>
+    <ellipse cx="1050" cy="73" rx="8" ry="3" fill="#0f3248"/>
+    <ellipse cx="1380" cy="72" rx="9" ry="3.5" fill="#0f3248"/>
+  </svg>
+</div>
+
+<!-- ANIMATED WAVES -->
+<div class="wave-scene">
+  <svg class="wave-1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path fill="#A8D8C8" d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1440,20 1440,60 L1440,120 L0,120 Z"/>
+  </svg>
+  <svg class="wave-2" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path fill="#1B4F72" d="M0,70 C200,30 400,110 600,70 C800,30 1000,110 1200,70 C1320,50 1440,80 1440,70 L1440,120 L0,120 Z"/>
+  </svg>
+  <svg class="wave-3" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path fill="#2980B9" d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z"/>
+  </svg>
+</div>
+
+
 <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none" style="background:var(--ocean);">
   <path fill="#E8DFD0" d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z"/>
 </svg>
