@@ -29,7 +29,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -70,7 +69,6 @@
 
   .nav-links a:hover { color: var(--tide); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -99,21 +97,6 @@
     text-transform: uppercase;
     color: var(--seafoam);
     margin-bottom: 1.6rem;
-  }
-
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.4rem, 8vw, 7rem);
-    font-weight: 300;
-    line-height: 1.02;
-    color: var(--cream);
-    letter-spacing: -0.01em;
-    margin-bottom: 0.3rem;
-  }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--seafoam);
   }
 
   .hero-logo {
@@ -173,7 +156,6 @@
     color: var(--seafoam);
   }
 
-  /* INTRO STRIP */
   .intro-strip {
     background: var(--sand);
     padding: 3.5rem 4rem;
@@ -192,7 +174,6 @@
     line-height: 1.5;
   }
 
-  /* SECTION LABELS */
   .section-label {
     font-size: 0.68rem;
     letter-spacing: 0.22em;
@@ -201,7 +182,6 @@
     margin-bottom: 1rem;
   }
 
-  /* PORTFOLIO GRID */
   .portfolio {
     padding: 6rem 4rem;
     background: var(--cream);
@@ -322,27 +302,6 @@
     line-height: 1.5;
   }
 
-  /* PLACEHOLDER IMAGES */
-  .img-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    color: rgba(168,216,200,0.5);
-  }
-
-  .card-1-bg { background: #0d2b3e; }
-  .card-2-bg { background: #0f3248; }
-  .card-3-bg { background: #122d40; }
-  .card-4-bg { background: #0c2535; }
-  .card-5-bg { background: #0e2e42; }
-
-  /* ABOUT SECTION */
   .about {
     padding: 7rem 4rem;
     background: var(--deep);
@@ -375,9 +334,7 @@
     margin-bottom: 1.2rem;
   }
 
-  .about-image {
-    position: relative;
-  }
+  .about-image { position: relative; }
 
   .about-image-frame {
     width: 100%;
@@ -419,7 +376,6 @@
     letter-spacing: 0.1em;
   }
 
-  /* SKILLS STRIP */
   .skills-strip {
     background: var(--sand);
     padding: 4rem;
@@ -430,11 +386,7 @@
     border-bottom: 1px solid rgba(10,31,46,0.08);
   }
 
-  .skill-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  .skill-item { display: flex; flex-direction: column; gap: 0.5rem; }
 
   .skill-item .skill-label {
     font-size: 0.68rem;
@@ -450,81 +402,8 @@
     color: var(--deep);
   }
 
-  .skill-item p {
-    font-size: 0.83rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+  .skill-item p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
 
-  /* CATEGORIES */
-  .categories {
-    padding: 6rem 4rem;
-    background: var(--cream);
-  }
-
-  .categories-header {
-    text-align: center;
-    margin-bottom: 3.5rem;
-  }
-
-  .categories-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300;
-    color: var(--deep);
-  }
-
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1px;
-    background: rgba(10,31,46,0.12);
-    border: 1px solid rgba(10,31,46,0.12);
-  }
-
-  .cat-card {
-    background: var(--cream);
-    padding: 2.5rem 2rem;
-    transition: background 0.25s;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-  }
-
-  .cat-card:hover { background: var(--deep); }
-
-  .cat-card:hover .cat-title,
-  .cat-card:hover .cat-desc { color: var(--cream); }
-
-  .cat-card:hover .cat-num { color: var(--seafoam); }
-
-  .cat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: rgba(10,31,46,0.12);
-    line-height: 1;
-    margin-bottom: 1rem;
-    transition: color 0.25s;
-  }
-
-  .cat-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--deep);
-    margin-bottom: 0.6rem;
-    transition: color 0.25s;
-  }
-
-  .cat-desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.6;
-    transition: color 0.25s;
-  }
-
-  /* CONTACT */
   .contact {
     padding: 7rem 4rem;
     background: var(--ocean);
@@ -571,7 +450,6 @@
 
   .contact-link:hover { color: var(--seafoam); }
 
-  /* FOOTER */
   footer {
     background: var(--deep);
     padding: 2.5rem 4rem;
@@ -598,7 +476,6 @@
     letter-spacing: 0.06em;
   }
 
-  /* ANIMATED WAVES */
   .wave-scene {
     position: relative;
     width: 100%;
@@ -614,27 +491,15 @@
     height: 100%;
   }
 
-  .wave-scene .wave-1 {
-    animation: wave-move 6s linear infinite;
-    opacity: 0.5;
-  }
-
-  .wave-scene .wave-2 {
-    animation: wave-move 9s linear infinite reverse;
-    opacity: 0.35;
-  }
-
-  .wave-scene .wave-3 {
-    animation: wave-move 12s linear infinite;
-    opacity: 0.2;
-  }
+  .wave-scene .wave-1 { animation: wave-move 6s linear infinite; opacity: 0.5; }
+  .wave-scene .wave-2 { animation: wave-move 9s linear infinite reverse; opacity: 0.35; }
+  .wave-scene .wave-3 { animation: wave-move 12s linear infinite; opacity: 0.2; }
 
   @keyframes wave-move {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
 
-  /* CORAL SCENE */
   .coral-scene {
     position: relative;
     width: 100%;
@@ -651,7 +516,6 @@
     height: 100%;
   }
 
-  /* tiny bobbing coral stems */
   .coral-a { animation: coral-sway 3.2s ease-in-out infinite; transform-origin: bottom center; }
   .coral-b { animation: coral-sway 4.1s ease-in-out infinite 0.5s; transform-origin: bottom center; }
   .coral-c { animation: coral-sway 2.8s ease-in-out infinite 1s; transform-origin: bottom center; }
@@ -663,17 +527,16 @@
     50%       { transform: rotate(4deg); }
   }
 
-
+  .wave-divider {
     display: block;
     width: 100%;
     overflow: hidden;
     line-height: 0;
   }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
-    .portfolio, .about, .categories, .contact, .skills-strip, .intro-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .portfolio, .about, .contact, .skills-strip, .intro-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
     .portfolio { padding: 4rem 1.5rem; }
     .portfolio-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
     .project-card:nth-child(1) { grid-column: span 2; grid-row: span 1; }
@@ -712,8 +575,6 @@
     <a href="#work" class="btn btn-primary">View my work</a>
     <a href="#contact" class="btn btn-ghost">Get in touch</a>
   </div>
-
-  <!-- animated wave at bottom of hero -->
   <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none">
     <path fill="#A8D8C8" fill-opacity="0.15" d="M0,40 C360,100 720,0 1080,60 C1200,80 1320,50 1440,60 L1440,160 L0,160 Z"/>
     <path fill="#A8D8C8" fill-opacity="0.1" d="M0,80 C300,40 600,120 900,80 C1100,55 1300,100 1440,75 L1440,160 L0,160 Z"/>
@@ -744,7 +605,6 @@
 
   <div class="portfolio-grid">
 
-    <!-- Card 1 — featured large -->
     <div class="project-card" data-category="motion digital">
       <iframe
         src="https://drive.google.com/file/d/1qaIoyh7R6DISM6fCAYS8aVdKKnZ1US-X/preview"
@@ -759,13 +619,8 @@
       </div>
     </div>
 
-    <!-- Card 2 -->
     <div class="project-card" data-category="digital">
-      <img
-        src="https://drive.google.com/thumbnail?id=1WmjVk3dXRBZbINNV2LHvGe0IavHSY5J-&sz=w800"
-        alt="To iimissyy — remastered profile picture commission"
-        class="card-img"
-        style="min-height:260px;">
+      <img src="https://drive.google.com/thumbnail?id=1WmjVk3dXRBZbINNV2LHvGe0IavHSY5J-&sz=w800" alt="To iimissyy — remastered profile picture commission" class="card-img" style="min-height:260px;">
       <div class="card-overlay">
         <span class="card-tag">Commission &nbsp;·&nbsp; Digital Illustration</span>
         <h3>To iimissyy</h3>
@@ -773,13 +628,8 @@
       </div>
     </div>
 
-    <!-- Card 3 -->
     <div class="project-card" data-category="digital">
-      <img
-        src="https://drive.google.com/thumbnail?id=1HBpsdOK7JjA99MKRmmBgKYYSX1fQOJVi&sz=w800"
-        alt="Episode cover illustration for Khloe.writes"
-        class="card-img"
-        style="min-height:260px;">
+      <img src="https://drive.google.com/thumbnail?id=1HBpsdOK7JjA99MKRmmBgKYYSX1fQOJVi&sz=w800" alt="Episode cover illustration for Khloe.writes" class="card-img" style="min-height:260px;">
       <div class="card-overlay">
         <span class="card-tag">Commission &nbsp;·&nbsp; Digital Illustration</span>
         <h3>Cover for Khloe.writes</h3>
@@ -787,13 +637,8 @@
       </div>
     </div>
 
-    <!-- Card 4 -->
     <div class="project-card" data-category="print">
-      <img
-        src="https://drive.google.com/thumbnail?id=1sUjRWzZ7zCeQhwvK9WmZVnvQ89Fk3G-c&sz=w800"
-        alt="36 Days of Type — typography project"
-        class="card-img"
-        style="min-height:260px;">
+      <img src="https://drive.google.com/thumbnail?id=1sUjRWzZ7zCeQhwvK9WmZVnvQ89Fk3G-c&sz=w800" alt="36 Days of Type — typography project" class="card-img" style="min-height:260px;">
       <div class="card-overlay">
         <span class="card-tag">College &nbsp;·&nbsp; Typography</span>
         <h3>36 Days of Type</h3>
@@ -801,13 +646,8 @@
       </div>
     </div>
 
-    <!-- Card 5 -->
     <div class="project-card" data-category="digital">
-      <img
-        src="https://drive.google.com/thumbnail?id=1pyVWYGKm0XAREKMHAICro9v7e3pvuswI&sz=w800"
-        alt="Mockup — digital illustration"
-        class="card-img"
-        style="min-height:260px;">
+      <img src="https://drive.google.com/thumbnail?id=1pyVWYGKm0XAREKMHAICro9v7e3pvuswI&sz=w800" alt="Mockup — digital illustration" class="card-img" style="min-height:260px;">
       <div class="card-overlay">
         <span class="card-tag">Personal &nbsp;·&nbsp; Digital Illustration</span>
         <h3>Mockup</h3>
@@ -815,13 +655,8 @@
       </div>
     </div>
 
-    <!-- Card 6 -->
     <div class="project-card" data-category="print">
-      <img
-        src="https://drive.google.com/thumbnail?id=1Jvz-K3Tf79lNCp0La6TuCnUdg5B0RSIe&sz=w800"
-        alt="Graphic Design is a Social Movement — mixed media illustration"
-        class="card-img"
-        style="min-height:260px;">
+      <img src="https://drive.google.com/thumbnail?id=1Jvz-K3Tf79lNCp0La6TuCnUdg5B0RSIe&sz=w800" alt="Graphic Design is a Social Movement — mixed media illustration" class="card-img" style="min-height:260px;">
       <div class="card-overlay">
         <span class="card-tag">College &nbsp;·&nbsp; Mixed Media Illustration</span>
         <h3>Graphic Design is a Social Movement</h3>
@@ -842,15 +677,18 @@
     <p>I hold a Bachelor of Design from PennWest Edinboro and two years of hands-on experience at Zippo Manufacturing, where I created custom artwork for everything from product launches to U.S. Marines commissions.</p>
     <p>Currently available for freelance work and open to full-time opportunities.</p>
     <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.4rem;">
-      <a href="#contact" class="btn btn-primary">Let's work together</a>
-      <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/1470071a9d0be8cec1a7487567927aff451be661/Koral%20Pleakis%202026%20resume%20in%20color.pdf" download class="btn btn-ghost" style="border-color:rgba(168,216,200,0.4); color:var(--seafoam);">Resume (color)</a>
-      <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/66c706b5e4d7db9af968a3979c1a74c0ab6f9c86/Koral%20Pleakis%202026%20resume%20in%20B%26W.pdf" download class="btn btn-ghost" style="border-color:rgba(168,216,200,0.4); color:var(--seafoam);">Resume (B&W)</a>
+      <div>
+        <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/1470071a9d0be8cec1a7487567927aff451be661/Koral%20Pleakis%202026%20resume%20in%20color.pdf" download class="btn btn-ghost" style="border-color:rgba(168,216,200,0.4); color:var(--seafoam);">Resume (color)</a>
+        <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/66c706b5e4d7db9af968a3979c1a74c0ab6f9c86/Koral%20Pleakis%202026%20resume%20in%20B%26W.pdf" download class="btn btn-ghost" style="border-color:rgba(168,216,200,0.4); color:var(--seafoam);">Resume (B&amp;W)</a>
+      </div>
+      <div>
+        <a href="#contact" class="btn btn-primary">Let's work together</a>
+      </div>
     </div>
   </div>
   <div class="about-image">
     <div class="about-image-frame">
-      <img src="20260531_152836.jpg" alt="Portrait of Koral Pleakis"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <img src="20260531_152836.jpg" alt="Portrait of Koral Pleakis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="about-portrait-placeholder" style="display:none;">
         <span style="writing-mode:vertical-rl; letter-spacing:0.2em; text-transform:uppercase; font-size:0.75rem;">Add portrait here</span>
       </div>
@@ -924,10 +762,7 @@
 <!-- CORAL SCENE -->
 <div class="coral-scene">
   <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- seabed -->
     <rect x="0" y="70" width="1440" height="20" fill="#0c2535"/>
-
-    <!-- coral A - branching, left -->
     <g class="coral-a">
       <line x1="80" y1="70" x2="80" y2="40" stroke="#A8D8C8" stroke-width="3" stroke-linecap="round"/>
       <line x1="80" y1="55" x2="65" y2="38" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
@@ -936,8 +771,6 @@
       <circle cx="63" cy="36" r="3" fill="#A8D8C8"/>
       <circle cx="97" cy="32" r="3" fill="#A8D8C8"/>
     </g>
-
-    <!-- coral B - tall fan, centre-left -->
     <g class="coral-b">
       <line x1="320" y1="70" x2="320" y2="30" stroke="#5B8A7A" stroke-width="3" stroke-linecap="round"/>
       <line x1="320" y1="48" x2="305" y2="32" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
@@ -950,8 +783,6 @@
       <circle cx="306" cy="20" r="2" fill="#5B8A7A"/>
       <circle cx="334" cy="18" r="2" fill="#5B8A7A"/>
     </g>
-
-    <!-- coral C - round bubble coral, centre -->
     <g class="coral-c">
       <line x1="600" y1="70" x2="600" y2="50" stroke="#2980B9" stroke-width="3" stroke-linecap="round"/>
       <circle cx="600" cy="44" r="7" fill="none" stroke="#2980B9" stroke-width="2"/>
@@ -959,8 +790,6 @@
       <circle cx="609" cy="36" r="5" fill="none" stroke="#2980B9" stroke-width="2"/>
       <circle cx="600" cy="30" r="4" fill="none" stroke="#2980B9" stroke-width="2"/>
     </g>
-
-    <!-- coral D - thin wispy, right-centre -->
     <g class="coral-d">
       <line x1="900" y1="70" x2="900" y2="45" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
       <line x1="900" y1="58" x2="888" y2="42" stroke="#A8D8C8" stroke-width="1.5" stroke-linecap="round"/>
@@ -969,8 +798,6 @@
       <circle cx="886" cy="40" r="2.5" fill="#A8D8C8"/>
       <circle cx="914" cy="36" r="2.5" fill="#A8D8C8"/>
     </g>
-
-    <!-- coral E - fan, far right -->
     <g class="coral-e">
       <line x1="1280" y1="70" x2="1280" y2="35" stroke="#5B8A7A" stroke-width="3" stroke-linecap="round"/>
       <line x1="1280" y1="52" x2="1264" y2="36" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
@@ -979,8 +806,6 @@
       <circle cx="1262" cy="34" r="3" fill="#5B8A7A"/>
       <circle cx="1298" cy="28" r="3" fill="#5B8A7A"/>
     </g>
-
-    <!-- small pebbles on seabed -->
     <ellipse cx="150" cy="72" rx="10" ry="4" fill="#0f3248"/>
     <ellipse cx="450" cy="73" rx="7" ry="3" fill="#0f3248"/>
     <ellipse cx="750" cy="72" rx="12" ry="4" fill="#0f3248"/>
@@ -1002,27 +827,26 @@
   </svg>
 </div>
 
-
 <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none" style="background:var(--ocean);">
   <path fill="#E8DFD0" d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z"/>
 </svg>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <p class="section-label">Get in touch</p>
+<section id="contact">
+  <p>Get in touch</p>
   <h2>Let's make something<br><em>together.</em></h2>
   <p>Whether it's a commission, a collaboration, or just a conversation about design — I'd love to hear from you.</p>
-  <a href="mailto:koralpleakis.design@gmail.com" class="btn btn-primary">koralpleakis.design@gmail.com</a>
-  <div class="contact-links">
-    <a href="tel:7163788835" class="contact-link">716.378.8835</a>
-    <span style="color:rgba(248,246,240,0.2)">·</span>
-    <a href="https://www.instagram.com/fivehundredshadesofgrey?igsh=dnVzY2RxcGl5NDZh" class="contact-link" target="_blank">Instagram</a>
-    <span style="color:rgba(248,246,240,0.2)">·</span>
-    <a href="https://www.linkedin.com/in/koral-pleakis-a670aa3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="contact-link" target="_blank">LinkedIn</a>
-    <span style="color:rgba(248,246,240,0.2)">·</span>
-    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/1470071a9d0be8cec1a7487567927aff451be661/Koral%20Pleakis%202026%20resume%20in%20color.pdf" download class="contact-link">Resume (color)</a>
-    <span style="color:rgba(248,246,240,0.2)">·</span>
-    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/66c706b5e4d7db9af968a3979c1a74c0ab6f9c86/Koral%20Pleakis%202026%20resume%20in%20B%26W.pdf" download class="contact-link">Resume (B&W)</a>
+  <a href="mailto:koralpleakis.design@gmail.com">koralpleakis.design@gmail.com</a>
+  <div>
+    <a href="tel:7163788835">716.378.8835</a>
+    <span>·</span>
+    <a href="https://www.instagram.com/fivehundredshadesofgrey?igsh=dnVzY2RxcGl5NDZh" target="_blank">Instagram</a>
+    <span>·</span>
+    <a href="https://www.linkedin.com/in/koral-pleakis-a670aa3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+    <span>·</span>
+    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/1470071a9d0be8cec1a7487567927aff451be661/Koral%20Pleakis%202026%20resume%20in%20color.pdf" download>Resume (color)</a>
+    <span>·</span>
+    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/66c706b5e4d7db9af968a3979c1a74c0ab6f9c86/Koral%20Pleakis%202026%20resume%20in%20B%26W.pdf" download>Resume (B&W)</a>
   </div>
 </section>
 
