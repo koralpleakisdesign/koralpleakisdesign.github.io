@@ -82,15 +82,6 @@
     overflow: hidden;
   }
 
-  .hero-waves {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    width: 100%;
-    height: 160px;
-    pointer-events: none;
-    display: block;
-  }
-
   .hero-eyebrow {
     font-size: 0.72rem;
     letter-spacing: 0.22em;
@@ -120,6 +111,7 @@
     gap: 1.2rem;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 8rem;
   }
 
   .btn {
@@ -154,6 +146,40 @@
   .btn-ghost:hover {
     border-color: var(--seafoam);
     color: var(--seafoam);
+  }
+
+  .wave-scene {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    background: var(--deep);
+  }
+
+  .wave-scene svg {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+  }
+
+  .wave-scene .wave-1 { animation: wave-move 6s linear infinite; opacity: 0.5; }
+  .wave-scene .wave-2 { animation: wave-move 9s linear infinite reverse; opacity: 0.35; }
+  .wave-scene .wave-3 { animation: wave-move 12s linear infinite; opacity: 0.2; }
+
+  .wave-scene.hero-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 120px;
+    background: transparent;
+  }
+
+  @keyframes wave-move {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
   .intro-strip {
@@ -259,6 +285,15 @@
   }
 
   .project-card:nth-child(1) .card-img { min-height: 540px; }
+
+  /* Fix for iframe card — make it fill its grid area properly */
+  .project-card:nth-child(1) iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    border: none;
+    display: block;
+  }
 
   .project-card:hover .card-img {
     transform: scale(1.03);
@@ -404,6 +439,40 @@
 
   .skill-item p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
 
+  .coral-scene {
+    position: relative;
+    width: 100%;
+    background: var(--deep);
+    overflow: hidden;
+    height: 90px;
+  }
+
+  .coral-scene svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .coral-a { animation: coral-sway 3.2s ease-in-out infinite; transform-origin: bottom center; }
+  .coral-b { animation: coral-sway 4.1s ease-in-out infinite 0.5s; transform-origin: bottom center; }
+  .coral-c { animation: coral-sway 2.8s ease-in-out infinite 1s; transform-origin: bottom center; }
+  .coral-d { animation: coral-sway 3.6s ease-in-out infinite 0.2s; transform-origin: bottom center; }
+  .coral-e { animation: coral-sway 4.4s ease-in-out infinite 0.8s; transform-origin: bottom center; }
+
+  @keyframes coral-sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50%       { transform: rotate(4deg); }
+  }
+
+  .wave-divider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
   .contact {
     padding: 7rem 4rem;
     background: var(--ocean);
@@ -476,64 +545,6 @@
     letter-spacing: 0.06em;
   }
 
-  .wave-scene {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    overflow: hidden;
-    background: var(--deep);
-  }
-
-  .wave-scene svg {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 100%;
-  }
-
-  .wave-scene .wave-1 { animation: wave-move 6s linear infinite; opacity: 0.5; }
-  .wave-scene .wave-2 { animation: wave-move 9s linear infinite reverse; opacity: 0.35; }
-  .wave-scene .wave-3 { animation: wave-move 12s linear infinite; opacity: 0.2; }
-
-  @keyframes wave-move {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  .coral-scene {
-    position: relative;
-    width: 100%;
-    background: var(--deep);
-    overflow: hidden;
-    height: 90px;
-  }
-
-  .coral-scene svg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .coral-a { animation: coral-sway 3.2s ease-in-out infinite; transform-origin: bottom center; }
-  .coral-b { animation: coral-sway 4.1s ease-in-out infinite 0.5s; transform-origin: bottom center; }
-  .coral-c { animation: coral-sway 2.8s ease-in-out infinite 1s; transform-origin: bottom center; }
-  .coral-d { animation: coral-sway 3.6s ease-in-out infinite 0.2s; transform-origin: bottom center; }
-  .coral-e { animation: coral-sway 4.4s ease-in-out infinite 0.8s; transform-origin: bottom center; }
-
-  @keyframes coral-sway {
-    0%, 100% { transform: rotate(-4deg); }
-    50%       { transform: rotate(4deg); }
-  }
-
-  .wave-divider {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     .portfolio, .about, .contact, .skills-strip, .intro-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -575,11 +586,18 @@
     <a href="#work" class="btn btn-primary">View my work</a>
     <a href="#contact" class="btn btn-ghost">Get in touch</a>
   </div>
-  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none">
-    <path fill="#A8D8C8" fill-opacity="0.15" d="M0,40 C360,100 720,0 1080,60 C1200,80 1320,50 1440,60 L1440,160 L0,160 Z"/>
-    <path fill="#A8D8C8" fill-opacity="0.1" d="M0,80 C300,40 600,120 900,80 C1100,55 1300,100 1440,75 L1440,160 L0,160 Z"/>
-    <path fill="#F8F6F0" fill-opacity="0.06" d="M0,120 C360,100 720,140 1080,115 C1220,105 1360,125 1440,118 L1440,160 L0,160 Z"/>
-  </svg>
+
+  <div class="wave-scene hero-waves">
+    <svg class="wave-1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#A8D8C8" d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1440,20 1440,60 L1440,120 L0,120 Z"/>
+    </svg>
+    <svg class="wave-2" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#1B4F72" d="M0,70 C200,30 400,110 600,70 C800,30 1000,110 1200,70 C1320,50 1440,80 1440,70 L1440,120 L0,120 Z"/>
+    </svg>
+    <svg class="wave-3" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#2980B9" d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z"/>
+    </svg>
+  </div>
 </section>
 
 <!-- INTRO QUOTE -->
@@ -608,7 +626,6 @@
     <div class="project-card" data-category="motion digital">
       <iframe
         src="https://drive.google.com/file/d/1qaIoyh7R6DISM6fCAYS8aVdKKnZ1US-X/preview"
-        style="width:100%; min-height:540px; border:none; display:block;"
         allow="autoplay"
         allowfullscreen>
       </iframe>
@@ -759,94 +776,26 @@
   </div>
 </div>
 
-<!-- CORAL SCENE -->
-<div class="coral-scene">
-  <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <rect x="0" y="70" width="1440" height="20" fill="#0c2535"/>
-    <g class="coral-a">
-      <line x1="80" y1="70" x2="80" y2="40" stroke="#A8D8C8" stroke-width="3" stroke-linecap="round"/>
-      <line x1="80" y1="55" x2="65" y2="38" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
-      <line x1="80" y1="50" x2="95" y2="34" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="80" cy="38" r="4" fill="#A8D8C8"/>
-      <circle cx="63" cy="36" r="3" fill="#A8D8C8"/>
-      <circle cx="97" cy="32" r="3" fill="#A8D8C8"/>
-    </g>
-    <g class="coral-b">
-      <line x1="320" y1="70" x2="320" y2="30" stroke="#5B8A7A" stroke-width="3" stroke-linecap="round"/>
-      <line x1="320" y1="48" x2="305" y2="32" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
-      <line x1="320" y1="44" x2="335" y2="28" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
-      <line x1="320" y1="40" x2="308" y2="22" stroke="#5B8A7A" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="320" y1="40" x2="332" y2="20" stroke="#5B8A7A" stroke-width="1.5" stroke-linecap="round"/>
-      <circle cx="320" cy="28" r="3.5" fill="#5B8A7A"/>
-      <circle cx="303" cy="30" r="2.5" fill="#5B8A7A"/>
-      <circle cx="337" cy="26" r="2.5" fill="#5B8A7A"/>
-      <circle cx="306" cy="20" r="2" fill="#5B8A7A"/>
-      <circle cx="334" cy="18" r="2" fill="#5B8A7A"/>
-    </g>
-    <g class="coral-c">
-      <line x1="600" y1="70" x2="600" y2="50" stroke="#2980B9" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="600" cy="44" r="7" fill="none" stroke="#2980B9" stroke-width="2"/>
-      <circle cx="591" cy="36" r="5" fill="none" stroke="#2980B9" stroke-width="2"/>
-      <circle cx="609" cy="36" r="5" fill="none" stroke="#2980B9" stroke-width="2"/>
-      <circle cx="600" cy="30" r="4" fill="none" stroke="#2980B9" stroke-width="2"/>
-    </g>
-    <g class="coral-d">
-      <line x1="900" y1="70" x2="900" y2="45" stroke="#A8D8C8" stroke-width="2" stroke-linecap="round"/>
-      <line x1="900" y1="58" x2="888" y2="42" stroke="#A8D8C8" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="900" y1="54" x2="912" y2="38" stroke="#A8D8C8" stroke-width="1.5" stroke-linecap="round"/>
-      <circle cx="900" cy="43" r="3" fill="#A8D8C8"/>
-      <circle cx="886" cy="40" r="2.5" fill="#A8D8C8"/>
-      <circle cx="914" cy="36" r="2.5" fill="#A8D8C8"/>
-    </g>
-    <g class="coral-e">
-      <line x1="1280" y1="70" x2="1280" y2="35" stroke="#5B8A7A" stroke-width="3" stroke-linecap="round"/>
-      <line x1="1280" y1="52" x2="1264" y2="36" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
-      <line x1="1280" y1="48" x2="1296" y2="30" stroke="#5B8A7A" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="1280" cy="33" r="4" fill="#5B8A7A"/>
-      <circle cx="1262" cy="34" r="3" fill="#5B8A7A"/>
-      <circle cx="1298" cy="28" r="3" fill="#5B8A7A"/>
-    </g>
-    <ellipse cx="150" cy="72" rx="10" ry="4" fill="#0f3248"/>
-    <ellipse cx="450" cy="73" rx="7" ry="3" fill="#0f3248"/>
-    <ellipse cx="750" cy="72" rx="12" ry="4" fill="#0f3248"/>
-    <ellipse cx="1050" cy="73" rx="8" ry="3" fill="#0f3248"/>
-    <ellipse cx="1380" cy="72" rx="9" ry="3.5" fill="#0f3248"/>
-  </svg>
-</div>
-
-<!-- ANIMATED WAVES -->
-<div class="wave-scene">
-  <svg class="wave-1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path fill="#A8D8C8" d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1440,20 1440,60 L1440,120 L0,120 Z"/>
-  </svg>
-  <svg class="wave-2" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path fill="#1B4F72" d="M0,70 C200,30 400,110 600,70 C800,30 1000,110 1200,70 C1320,50 1440,80 1440,70 L1440,120 L0,120 Z"/>
-  </svg>
-  <svg class="wave-3" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path fill="#2980B9" d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z"/>
-  </svg>
-</div>
-
 <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none" style="background:var(--ocean);">
   <path fill="#E8DFD0" d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z"/>
 </svg>
 
 <!-- CONTACT -->
-<section id="contact">
-  <p>Get in touch</p>
+<section class="contact" id="contact">
+  <p class="section-label">Get in touch</p>
   <h2>Let's make something<br><em>together.</em></h2>
   <p>Whether it's a commission, a collaboration, or just a conversation about design — I'd love to hear from you.</p>
-  <a href="mailto:koralpleakis.design@gmail.com">koralpleakis.design@gmail.com</a>
-  <div>
-    <a href="tel:7163788835">716.378.8835</a>
-    <span>·</span>
-    <a href="https://www.instagram.com/fivehundredshadesofgrey?igsh=dnVzY2RxcGl5NDZh" target="_blank">Instagram</a>
-    <span>·</span>
-    <a href="https://www.linkedin.com/in/koral-pleakis-a670aa3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
-    <span>·</span>
-    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/1470071a9d0be8cec1a7487567927aff451be661/Koral%20Pleakis%202026%20resume%20in%20color.pdf" download>Resume (color)</a>
-    <span>·</span>
-    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/66c706b5e4d7db9af968a3979c1a74c0ab6f9c86/Koral%20Pleakis%202026%20resume%20in%20B%26W.pdf" download>Resume (B&W)</a>
+  <a href="mailto:koralpleakis.design@gmail.com" class="btn btn-primary">koralpleakis.design@gmail.com</a>
+  <div class="contact-links">
+    <a href="tel:7163788835" class="contact-link">716.378.8835</a>
+    <span style="color:rgba(248,246,240,0.2)">·</span>
+    <a href="https://www.instagram.com/fivehundredshadesofgrey?igsh=dnVzY2RxcGl5NDZh" class="contact-link" target="_blank">Instagram</a>
+    <span style="color:rgba(248,246,240,0.2)">·</span>
+    <a href="https://www.linkedin.com/in/koral-pleakis-a670aa3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="contact-link" target="_blank">LinkedIn</a>
+    <span style="color:rgba(248,246,240,0.2)">·</span>
+    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/1470071a9d0be8cec1a7487567927aff451be661/Koral%20Pleakis%202026%20resume%20in%20color.pdf" download class="contact-link">Resume (color)</a>
+    <span style="color:rgba(248,246,240,0.2)">·</span>
+    <a href="https://raw.githubusercontent.com/koralpleakisdesign/koralpleakisdesign.github.io/66c706b5e4d7db9af968a3979c1a74c0ab6f9c86/Koral%20Pleakis%202026%20resume%20in%20B%26W.pdf" download class="contact-link">Resume (B&W)</a>
   </div>
 </section>
 
